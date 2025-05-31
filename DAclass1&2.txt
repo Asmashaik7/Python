@@ -1,0 +1,149 @@
+Python 3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)] on win32
+Enter "help" below or click "Help" above for more information.
+1+1
+2
+2+3
+5
+asma
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    asma
+NameError: name 'asma' is not defined
+name=asma
+Traceback (most recent call last):
+  File "<pyshell#3>", line 1, in <module>
+    name=asma
+NameError: name 'asma' is not defined
+name='asma'
+hname='jaffer'
+sname='ayman'
+dname='zoya'
+name
+'asma'
+hname
+'jaffer'
+dname
+'zoya'
+apple=20
+apple
+20
+banana=30
+apple+banana
+50
+apple=100
+apple+banana
+130
+asma
+Traceback (most recent call last):
+  File "<pyshell#17>", line 1, in <module>
+    asma
+NameError: name 'asma' is not defined
+fam='i love my family."
+SyntaxError: unterminated string literal (detected at line 1)
+fam="i love my family.'
+SyntaxError: unterminated string literal (detected at line 1)
+fam='i love my family.'
+fam
+'i love my family.'
+-asma
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    -asma
+NameError: name 'asma' is not defined
+asma
+Traceback (most recent call last):
+  File "<pyshell#23>", line 1, in <module>
+    asma
+NameError: name 'asma' is not defined
+name
+'asma'
+#this is an commenting symbol
+#this is an commenting symbol, this wont be run or compiled.
+input()
+"asma is a bad go\irl, hdfsbdfjdkhk, sbgjn"
+'"asma is a bad go\\irl, hdfsbdfjdkhk, sbgjn"'
+#remember, no need of quotes to input(), it gives o/p with single quotes
+asma is a bad go\irl, hdfsbdfjdkhk, sbgjn
+SyntaxError: invalid syntax
+input()
+asma is a bad go\irl, hdfsbdfjdkhk, sbgjn
+'asma is a bad go\\irl, hdfsbdfjdkhk, sbgjn'
+input()
+a   b   c   d   f   g  ghhg
+'a   b   c   d   f   g  ghhg'
+input()
+input(>>>)
+'input(>>>)'
+input(>>>)
+SyntaxError: invalid syntax
+input('--')
+--hhhh
+'hhhh'
+input('asma')
+asmashaik
+'shaik'
+input('asma')
+asmashaik
+'shaik'
+input('asma')
+asma
+''
+what should i enter
+SyntaxError: invalid syntax
+#what should i enter
+input('what should i enter')
+what should i enter
+''
+input('enter your math marks : ')
+enter your math marks : 90
+'90'
+input('enter your eng marks : ')
+enter your eng marks : 85
+'85'
+Maths=input('enter your math marks : ')
+enter your math marks : 90
+maths
+Traceback (most recent call last):
+  File "<pyshell#44>", line 1, in <module>
+    maths
+NameError: name 'maths' is not defined. Did you mean: 'Maths'?
+Maths
+'90'
+Eng=input('enter your eng marks : ')
+enter your eng marks : 85
+Eng
+'85'
+Sci=input('enter your sci marks : ')
+enter your sci marks : 88
+Sci
+'88'
+Total=Eng+Maths+Sci
+Total
+'859088'
+Total=Eng+ Maths+ Sci
+Total
+'859088'
+Eng+ Maths+ Sci
+'859088'
+Eng+Maths+Sci
+'859088'
+#here is the error, we can do this by concatinating only. we cant add like this. later we learn abt concat function
+input(--)
+SyntaxError: invalid syntax
+input()
+1.11
+'1.11'
+input()
+a        bbbbb    bnjdshkk
+'a        bbbbb    bnjdshkk'
+type(1111)
+<class 'int'>
+type(abcd)
+Traceback (most recent call last):
+  File "<pyshell#61>", line 1, in <module>
+    type(abcd)
+NameError: name 'abcd' is not defined
+type('abcdfg')
+<class 'str'>
+type('input()')
+<class 'str'>
