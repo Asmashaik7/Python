@@ -150,5 +150,16 @@ result1=fun_owners(qry_select_all_owners)
 for r in result1:
     print(r)
 
+with open('car.csv', 'w') as file:
+    writer=csv.writer(file)
+    writer.writerow(['carid', 'carmake', 'carmodel', 'caryear'])  # Column names
+    writer.writerows(result)
+    print("Data exported to car.csv successfully ...")
 
+
+with open('owners.csv','w') as file1:
+    writer=csv.writer(file1)
+    writer.writerows(['owner_name','owner_id','owner_car_id'])
+    writer.writerows(result1)
+    print("Data exported to owners.csv successfully ...")
 
