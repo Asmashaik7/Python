@@ -1,0 +1,425 @@
+Python Interview Series - Part 1
+
+🎯 Topics Covered: Variables, Data Types, Operators
+
+🧑‍💼 Interviewer: Welcome! Ready to begin?
+👨‍💻 Candidate: Yes, absolutely.
+
+🧑‍💼 Interviewer: What is a variable in Python?
+👨‍💻 Candidate: A variable in Python is a name that refers to a value stored in memory. Unlike other languages, you don’t need to declare its type — Python infers it automatically. Example:
+python
+x = 10
+name = "Deepak"
+
+  Here, x is an integer and name is a string. Python variables are references to objects, not containers that hold data directly.
+
+🧑‍💼 Interviewer: How does Python manage variable memory?
+👨‍💻 Candidate: When you assign a value to a variable, Python creates an object in memory and binds the variable name to it. If you assign the same value to another variable, both can point to the same memory location (for immutable types).
+Example:
+python
+a = 100
+b = a
+print(id(a), id(b))  # same id → both refer to same object
+
+  Mutable objects like lists behave differently — if modified, their memory doesn’t change.
+
+🧑‍💼 Interviewer: What are Python’s built-in data types?
+👨‍💻 Candidate: Python has several standard data types:
+Numeric → int, float, complex
+Sequence → str, list, tuple
+Mapping → dict
+Set → set, frozenset
+Boolean → bool
+Binary → bytes, bytearray, memoryview
+Example:
+python
+num = 10
+pi = 3.14
+name = "Python"
+is_valid = True
+
+
+🧑‍💼 Interviewer: What’s the difference between mutable and immutable data types?
+👨‍💻 Candidate:
+Mutable → Can be changed after creation (list, dict, set)
+Immutable → Cannot be changed after creation (int, float, str, tuple)
+Example:
+python
+x = [1, 2, 3]
+x.append(4)  # modifies list
+
+y = "hello"
+y.upper()    # creates new string, doesn't modify original
+
+
+🧑‍💼 Interviewer: What is type casting or type conversion in Python?
+👨‍💻 Candidate: It’s the process of converting one data type into another.
+Implicit → Python converts automatically
+python
+x = 5
+y = 2.0
+print(x + y)  # 7.0
+
+  Explicit → You convert manually
+python
+int("10"), float("5.5"), str(25)
+
+
+🧑‍💼 Interviewer: What are operators in Python?
+👨‍💻 Candidate: Operators are symbols that perform operations on variables and values.
+Types include:
+Arithmetic → +, -, , /, %, //, *
+Comparison → ==,!=,>, <,>=, <=
+Logical → and, or, not
+Assignment → =, +=, -=
+Membership → in, not in
+Identity → is, is not
+Bitwise → &, |, ^, ~, <<,>>
+
+🧑‍💼 Interviewer: Difference between is and == operators?
+👨‍💻 Candidate: == compares values, is compares memory location.
+Example:
+python
+a = [1, 2]
+b = [1, 2]
+print(a == b)  # True
+print(a is b)  # False
+
+
+🧑‍💼 Interviewer: Difference between / and // operators?
+👨‍💻 Candidate: / → true division (float), // → floor division (int)
+Example:
+python
+print(7 / 2)   # 3.5
+print(7 // 2)  # 3
+
+
+🧑‍💼 Interviewer: How does Python handle dynamic typing?
+👨‍💻 Candidate: Python uses dynamic typing — variable types are determined at runtime and can change.
+Example:
+python
+x = 10       # int
+x = "Hello"  # now str
+
+
+🧑‍💼 Interviewer: Use of type() and id() functions?
+👨‍💻 Candidate: type() → returns data type, id() → returns memory address
+Example:
+python
+x = 5
+print(type(x))  # <class 'int'>
+print(id(x))    # unique memory id
+
+===============================================================
+Python Interview Series - Part 2
+
+🎯 Topics: Conditional Statements & Loops
+
+🧑‍💼 Interviewer: What are conditional statements in Python?
+👨‍💻 Candidate:
+Conditional statements allow us to execute specific blocks of code based on certain conditions.
+Python uses if, elif, and else to control decision-making.
+
+Example:
+python
+age = 18
+if age < 18:
+    print("Minor")
+elif age == 18:
+    print("Just eligible")
+else:
+    print("Adult")
+
+
+✅ Only one block executes depending on the condition that evaluates to True.
+
+🧑‍💼 Interviewer: Can you explain the difference between if and elif?
+👨‍💻 Candidate:
+if starts the conditional chain.
+elif (short for else if) allows checking multiple conditions sequentially.
+If none are True, the else block runs.
+
+Example:
+python
+x = 0
+if x> 0:
+    print("Positive")
+elif x == 0:
+    print("Zero")
+else:
+    print("Negative")
+
+
+🧑‍💼 Interviewer: Is there a way to write a single-line if statement in Python?
+👨‍💻 Candidate:
+Yes, we can use the ternary (conditional) expression.
+
+Example:
+python
+result = "Even" if num % 2 == 0 else "Odd"
+
+
+This makes the code concise for simple conditions.
+
+🧑‍💼 Interviewer: What are loops in Python?
+👨‍💻 Candidate:
+Loops allow repeating a block of code multiple times.
+Python supports two main loops:
+- for loop – used to iterate over a sequence (like list, tuple, dict, string).
+- while loop – runs as long as a condition is True.
+
+🧑‍💼 Interviewer: Can you explain how a for loop works in Python?
+👨‍💻 Candidate:
+A for loop iterates over any iterable object (like a list or string).
+
+Example:
+python
+for i in [1, 2, 3]:
+    print(i)
+
+
+Here, Python automatically fetches each item from the list one by one — no index or counter is required (unlike C or Java).
+
+🧑‍💼 Interviewer: How does the range() function work in loops?
+👨‍💻 Candidate:
+range() generates a sequence of numbers and is often used for looping a fixed number of times.
+Syntax: range(start, stop, step)
+
+Example:
+python
+for i in range(1, 6, 2):
+    print(i)  # 1, 3, 5
+
+
+Default values → start=0, step=1.
+It doesn’t create a list; it returns a range object (saves memory).
+
+🧑‍💼 Interviewer: What’s the difference between for and while loops?
+👨‍💻 Candidate:
+- for loop: Used when we know how many times to iterate.
+- while loop: Used when we don’t know the number of iterations — runs until the condition becomes false.
+
+Example:
+python
+# for loop
+for i in range(5):
+    print(i)
+
+# while loop
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+
+
+🧑‍💼 Interviewer: What is the difference between break, continue, and pass statements?
+👨‍💻 Candidate:
+They control the loop flow:
+
+Statement – Function
+break – Exits the loop immediately
+continue – Skips the current iteration and moves to the next
+pass – Does nothing (placeholder for future code)
+
+Example:
+python
+for i in range(5):
+    if i == 2:
+        continue  # skips 2
+    if i == 4:
+        break     # stops loop
+    print(i)
+
+
+🧑‍💼 Interviewer: What is a nested loop? Give an example.
+👨‍💻 Candidate:
+A nested loop means having a loop inside another loop.
+Used for matrix traversal or pattern printing.
+
+Example:
+python
+for i in range(3):
+    for j in range(2):
+        print(i, j)
+
+
+It executes the inner loop completely for each iteration of the outer loop.
+
+🧑‍💼 Interviewer: Can you use an else clause with loops?
+👨‍💻 Candidate:
+Yes. In Python, a loop can have an else clause that runs only if the loop completes normally (not terminated by break).
+
+Example:
+python
+for i in range(3):
+    print(i)
+else:
+    print("Loop finished")
+
+
+If break is used, the else block is skipped.
+
+🧑‍💼 Interviewer: How do we iterate through a dictionary?
+👨‍💻 Candidate:
+We can loop through its keys, values, or both:
+
+python
+data = {"a": 1, "b": 2}
+for key, value in data.items():
+    print(key, value)
+===================================================================================================
+Python Interview Series - Part 3
+
+🎯 Topic: Functions, Arguments, and Scope in Python
+
+👨‍💼 Interviewer: What is a function in Python and why do we use it?
+👨‍💻 Candidate:
+A function is a reusable block of code that performs a specific task.
+It helps organize code, reduce repetition, and improve readability.
+
+We define a function using the def keyword:
+python
+def greet(name):
+    return f"Hello, {name}!"
+
+  ✅ Functions make large programs modular and easy to debug.
+
+👨‍💼 Interviewer: What’s the difference between print() and return inside a function?
+👨‍💻 Candidate:
+print() → Displays output to the console.
+return → Sends a value back to the caller for further use.
+
+Example:
+python
+def add(a, b):
+    print(a + b)     # prints result
+    return a + b     # returns result
+
+  If we just use print(), we can’t reuse the value.
+But with return, the function becomes more flexible.
+
+👨‍💼 Interviewer: What are different types of function arguments in Python?
+👨‍💻 Candidate:
+There are four main types of arguments:
+
+Type — Example — Description
+Positional — add(2, 3) — Order matters
+Keyword — add(a=2, b=3) — Order doesn’t matter
+Default — def add(a, b=5) — Default used if value missing
+Variable-length — *args, **kwargs — Used when argument count varies
+
+Example:
+python
+def details(name, *skills, **info):
+    print(name)
+    print(skills)
+    print(info)
+
+details("Alex", "Python", "SQL", age=25, city="NY")
+
+  Output:
+Alex
+('Python', 'SQL')
+{'age': 25, 'city': 'NY'}
+
+👨‍💼 Interviewer: Can you explain *args and **kwargs with a simple example?
+👨‍💻 Candidate:
+Sure!
+*args → accepts multiple non-keyword arguments as a tuple.
+**kwargs → accepts keyword arguments as a dictionary.
+
+Example:
+python
+def show(*args, **kwargs):
+    print("Args:", args)
+    print("Kwargs:", kwargs)
+
+show(1, 2, 3, name="Deepak", city="Delhi")
+
+  Output:
+Args: (1, 2, 3)
+Kwargs: {'name': 'Deepak', 'city': 'Delhi'}
+
+👨‍💼 Interviewer: What are lambda functions?
+👨‍💻 Candidate:
+Lambda functions are small anonymous functions defined in one line using the lambda keyword.
+They’re often used for short tasks like sorting or filtering.
+
+Example:
+python
+square = lambda x: x**2
+print(square(5))  # Output: 25
+
+  They can take any number of arguments but only one expression.
+
+👨‍💼 Interviewer: Can you explain variable scope in Python?
+👨‍💻 Candidate:
+Yes. Python uses the LEGB Rule to determine scope:
+L → Local
+E → Enclosing
+G → Global
+B → Built-in
+
+Example:
+python
+x = 10  # Global variable
+
+def outer():
+    x = 20  # Enclosing variable
+    def inner():
+        x = 30  # Local variable
+        print(x)
+    inner()
+    print(x)
+
+outer()
+print(x)
+
+  Output:
+30
+20
+10
+
+👨‍💼 Interviewer: How do you modify a global variable inside a function?
+👨‍💻 Candidate:
+We use the global keyword.
+
+python
+x = 5
+
+def update():
+    global x
+    x = 10
+
+update()
+print(x)  # Output: 10
+
+  Without global, Python treats x as a new local variable inside the function.
+
+👨‍💼 Interviewer: Can a function return multiple values?
+👨‍💻 Candidate:
+Yes! In Python, a function can return multiple values as a tuple.
+
+python
+def stats(a, b):
+    return a + b, a - b, a * b
+
+add, sub, mul = stats(5, 3)
+print(add, sub, mul)
+
+  Output:
+8 2 15
+
+👨‍💼 Interviewer: What is recursion in Python?
+👨‍💻 Candidate:
+Recursion is when a function calls itself to solve a smaller instance of a problem.
+A base case is essential to stop infinite recursion.
+
+Example:
+python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(factorial(5)) #Output:120
